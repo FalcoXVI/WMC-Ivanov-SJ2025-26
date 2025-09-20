@@ -1,43 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trattoria Bella – Italienisches Restaurant</title>
-</head>
-<body>
-    
-    <h1>Trattoria Bella - Italienische Küche</h1>
-    
-    <p>
-        Über Uns: 
-        Traditionelle Italienische Küche mit unglaublichem Geschmack.
-    </p>
-
-    <h2>Menue</h2>
-    <table border="1">
-        <tr>
-            <td>Pizza</td>
-            <td>Preis</td>
-        </tr>
-
-        <tr>
-            <td>Pizza Margaritta</td>
-            <td>12€</td>
-        </tr>
-
-        <tr>
-        <td>Pizza Fiorentino</td>
-        <td>13€</td>
-        </tr>
-
-        <tr>
-        <td>Pizza Provintiale</td>
-        <td>13€</td>
-        </tr>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-    </table>
+        <!--        CSS Verbindungen
+        <link rel="stylesheet" href="theme-light.css"> 
+        <link id="theme" rel="stylesheet" href="theme-light.css"> -->
+        
 
-</body>
+
+        <title>Trattoria Bella – Italienisches Restaurant</title>
+
+    </div>
+        <nav class="wrap" aria-label="Hauptnavigation">
+        <a href="#about">Über uns</a>
+        <a href="#menu">Menü</a>
+        <a href="#reserve">Reservieren</a>
+        <a href="#hours">Öffnungszeiten</a>
+        <a href="#kontakt">Kontakt</a>
+        </nav>
+    </div>
+
+    </head>
+    
+    <body>
+       
+        <main>
+            
+            <section>
+                <!--        button für CSS Themes       -->
+                <button onclick="const el = document.getElementById('theme'); el.href = el.href.endsWith('theme-light.css') ? 'theme-dark.css' : 'theme-light.css';">Theme wechseln</button> 
+
+
+                <h1>Trattoria Bella - Italienische Küche</h1>
+                
+                <p>
+                    Über Uns: 
+                    Traditionelle Italienische Küche mit unglaublichem Geschmack.
+                </p>
+                    
+            </section>
+
+            <section>
+
+                <h2>Menue</h2>
+                <table border="1" name="table">
+
+                    <caption>Pizza und Pasta</caption>
+                        
+                    <thead>
+                        <tr>
+                            <td>Nummer</td>
+                            <td>Pizza</td>
+                            <td>Preis</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Pizza Margherita</td>
+                            <td>12€</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Pizza Fiorentino</td>
+                            <td>14€</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Pizza Provintiale</td>
+                            <td>13,50€</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>Pizza Diavolo</td>
+                            <td>13€</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>Pizza Caprichosa</td>
+                            <td>12€</td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>Pizza Salami</td>
+                            <td>11,50€</td>
+                        </tr>
+
+                        <tr>
+                            <td>7</td>
+                            <td>Pizza Pferferoni</td>
+                            <td>13€</td>
+                        </tr>
+
+                        <tr>
+                            <td>8</td>
+                            <td>Spaghetti Bolghnese</td>
+                            <td>13€</td>
+                        </tr>
+
+                        <tr>
+                            <td>9</td>
+                            <td>Spaghetti Carbonara</td>
+                            <td>10€</td>
+                        </tr>
+
+                        <tr>
+                            <td>10</td>
+                            <td>Pizza Neapolitani</td>
+                            <td>14€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            
+
+             
+
+            <section>
+            <h2>Öffnungszeiten</h2>
+                
+            <table border="1" name="table">
+
+                <!--  Tabellenüberschrifft 
+                <caption>Öffnungszeiten</caption>
+                -->
+                    
+                <thead>
+                    <tr>
+                        <td>Tag</td>
+                        <td>Uhrzeit</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Montag</td>
+                        <td>Geschlossen</td>
+                    </tr>
+
+                    <tr>
+                        <td>Dienstag–Freitag</td>
+                        <td>11:30–14:30 & 17:30–22:00</td>    
+                    </tr>
+
+                    <tr>
+                        <td>Samstag</td>
+                        <td>12:00–22:30</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sonntag</td>
+                        <td>12:00–21:00</td>
+                    </tr>
+                </tbody>
+            </table>
+            </section>
+            <aside>
+                <h2>Reservierungen</h2>
+
+                <form>
+                    <label for="fname">Vorname:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    
+                    <label for="lname">Nachname:</label><br>
+                    <input type="text" id="lname" name="lname"><br>
+                    
+                    <label for="day">Tag:</label><br>
+                    <input type="date" id="day" name="day"><br>
+                    
+                    <label for="time">Uhrzeit:</label><br>
+                    <input type="time" id="time" name="time"><br>
+                    
+                    <label for="guests">Anzahl Gäste:</label><br>
+                    <input type="number" id="guests" name="guests"><br>
+
+                    <button type="submit">Bestellung absenden</button>
+                </form>
+            </aside>
+        </main>
+
+        <footer>
+            <div>
+                <strong>Trattoria Bella</strong><br>
+                Via Roma 1, 12345 Musterstadt<br>
+                Tel: <a href="tel:+49123456789">+49 123 456789</a> ·
+                Mail: <a href="mailto:hallo@trattoria-bella.de">hallo@trattoria-bella.de</a>
+            </div>
+            <div>
+                Öffnungszeiten: Mo–So 11–22 Uhr<br>
+                <a href="#reservieren">Jetzt Tisch reservieren</a>
+            </div>
+
+            <div>
+                <a href="#contact-us">Impressum</a> ·
+                <a href="#privacy-pollicy">Datenschutz</a>
+            </div>
+
+        </footer>
+
+    </body>
 </html>

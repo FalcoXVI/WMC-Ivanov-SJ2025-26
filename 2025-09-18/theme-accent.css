@@ -1,0 +1,8 @@
+/* theme-light.css */
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;                 /* weiße Ränder vermeiden */
+  background-color: #000000; /* beliebige Farbe */
+}
