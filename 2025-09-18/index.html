@@ -4,33 +4,34 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <!--        CSS Verbindungen
-        <link rel="stylesheet" href="theme-light.css"> 
-        <link id="theme" rel="stylesheet" href="theme-light.css"> -->
-        
+       
+        <link id="light-theme" rel="stylesheet" href="theme-light.css"> 
+        <link id="dark-theme" rel="stylesheet" href="theme-accent.css"> 
 
 
         <title>Trattoria Bella – Italienisches Restaurant</title>
 
-    </div>
-        <nav class="wrap" aria-label="Hauptnavigation">
-        <a href="#about">Über uns</a>
-        <a href="#menu">Menü</a>
-        <a href="#reserve">Reservieren</a>
-        <a href="#hours">Öffnungszeiten</a>
-        <a href="#kontakt">Kontakt</a>
-        </nav>
-    </div>
+        
 
     </head>
     
     <body>
-       
+        
+        <div>
+            <nav class="wrap" aria-label="Hauptnavigation">
+            <a href="#about">Über uns</a>
+            <a href="#menu">Menü</a>
+            <a href="#reserve">Reservieren</a>
+            <a href="#hours">Öffnungszeiten</a>
+            <a href="#kontakt">Kontakt</a>
+            </nav>
+        </div>
+
         <main>
             
             <section>
                 <!--        button für CSS Themes       -->
-                <button onclick="const el = document.getElementById('theme'); el.href = el.href.endsWith('theme-light.css') ? 'theme-dark.css' : 'theme-light.css';">Theme wechseln</button> 
+                <button onclick="const el = document.getElementById('theme'); el.href = el.href.endsWith('theme-light.css') ? 'theme-dark.css' : 'theme-light.css';">Theme wechseln</button>
 
 
                 <h1>Trattoria Bella - Italienische Küche</h1>
@@ -42,10 +43,17 @@
                     
             </section>
 
+            <!-- logo ausständig
+            <section>
+                <h2>logo</h2>
+                <img src="img/logo.jpg" alt="">
+            </section>
+            -->
+
             <section>
 
                 <h2>Menue</h2>
-                <table border="1" name="table">
+                <table>
 
                     <caption>Pizza und Pasta</caption>
                         
@@ -128,7 +136,7 @@
             <section>
             <h2>Öffnungszeiten</h2>
                 
-            <table border="1" name="table">
+            <table>
 
                 <!--  Tabellenüberschrifft 
                 <caption>Öffnungszeiten</caption>

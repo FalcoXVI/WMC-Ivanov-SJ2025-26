@@ -1,8 +1,226 @@
-/* theme-light.css */
-html, body {
-  height: 100%;
+/* =========================
+   Trattoria Bella – DARK THEME
+   Cozy, wood-fired, candlelight mood
+   ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;600&display=swap');
+
+:root {
+  --bg: #111315;          /* dark slate */
+  --surface: #181B1F;     /* deep wood */
+  --text: #F3EFE9;        /* warm light */
+  --muted: #1F2328;       /* char */
+  --border: #2A2F35;
+  --accent: #FF6B57;      /* glowing ember tomato */
+  --accent-2: #6FCF6E;    /* fresh basil */
+  --accent-3: #C39A6B;    /* crust */
+  --shadow: 0 12px 34px rgba(0,0,0,0.4);
 }
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  margin: 0;                 /* weiße Ränder vermeiden */
-  background-color: #000000; /* beliebige Farbe */
+  font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at -10% -20%, rgba(255,107,87,0.06), transparent 60%),
+    radial-gradient(900px 500px at 110% 120%, rgba(111,207,110,0.08), transparent 60%),
+    var(--bg);
+  line-height: 1.65;
+}
+
+/* Layout */
+main, header, footer, nav, section, aside {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+@media (max-width: 920px) {
+  main { grid-template-columns: 1fr; }
+  aside { order: 2; }
+}
+
+/* Nav */
+nav.wrap {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(17,19,21,0.7);
+  backdrop-filter: saturate(160%) blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.6rem 1.25rem;
+}
+
+nav.wrap a {
+  display: inline-block;
+  margin-right: .8rem;
+  padding: .5rem .85rem;
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: all .2s ease;
+  font-weight: 700;
+}
+
+nav.wrap a:hover,
+nav.wrap a:focus {
+  background: var(--muted);
+  border-color: var(--border);
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  line-height: 1.2;
+  margin: 0 0 .6rem 0;
+  color: var(--text);
+}
+
+h1 {
+  font-size: clamp(2rem, 3.2vw + .5rem, 3rem);
+  letter-spacing: .4px;
+  color: var(--accent);
+  text-shadow: 0 2px 0 rgba(0,0,0,0.65);
+}
+
+h2 {
+  font-size: clamp(1.3rem, 2vw + .5rem, 1.8rem);
+  border-left: 6px solid var(--accent-2);
+  padding-left: .6rem;
+}
+
+/* Cards / Sections */
+section, aside {
+  background: linear-gradient(180deg, #1A1D21 0%, #15181C 100%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+}
+
+section + section { margin-top: 1rem; }
+
+/* Buttons */
+button, .button {
+  appearance: none;
+  border: 1px solid #ff8a7a;
+  background: linear-gradient(180deg, var(--accent), #CC5142);
+  color: #fff;
+  padding: .7rem 1rem;
+  border-radius: 10px;
+  font-weight: 800;
+  letter-spacing: .25px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(255,107,87,0.28);
+  transition: transform .06s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  filter: saturate(115%);
+  box-shadow: 0 12px 28px rgba(255,107,87,0.38);
+}
+
+button:active { transform: translateY(0); }
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #16191D;
+  color: var(--text);
+}
+
+caption {
+  caption-side: top;
+  font-weight: 900;
+  padding: .9rem;
+  color: var(--accent-2);
+  text-align: left;
+}
+
+thead td {
+  font-weight: 900;
+  background: linear-gradient(180deg, #20262B, #1B2025);
+  border-bottom: 1px solid var(--border);
+  padding: .75rem .9rem;
+}
+
+tbody td {
+  padding: .75rem .9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr:nth-child(odd) { background: #151A1E; }
+tbody tr:hover { background: #1E242A; }
+
+/* Price column alignment */
+tbody td:last-child, thead td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Forms */
+form {
+  display: grid;
+  gap: .75rem;
+}
+
+label {
+  font-weight: 800;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: .65rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #121519;
+  color: var(--text);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 4px rgba(111,207,110,0.22);
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border-top: 1px solid var(--border);
+  color: #C9C2B7;
+  background: linear-gradient(180deg, transparent, rgba(195,154,107,0.12));
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+footer a:hover { text-decoration: underline; }
+
+/* Accessibility tweaks */
+:focus-visible {
+  outline: 3px solid rgba(111,207,110,.6);
+  outline-offset: 2px;
 }

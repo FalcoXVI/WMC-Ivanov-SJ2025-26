@@ -1,8 +1,225 @@
-/* theme-light.css */
-html, body {
-  height: 100%;
+/* =========================
+   Trattoria Bella – LIGHT THEME
+   A warm, inviting trattoria look
+   ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;600&display=swap');
+
+:root {
+  --bg: #FFF8F0;          /* mozzarella cream */
+  --surface: #FFFFFF;
+  --text: #2A1E17;        /* espresso */
+  --muted: #F2E7DC;       /* biscotti */
+  --border: #E6D9CB;
+  --accent: #D64545;      /* pomodoro */
+  --accent-2: #2E7D32;    /* basilico */
+  --accent-3: #C39A6B;    /* wood-fired crust */
+  --shadow: 0 10px 30px rgba(42,30,23,0.08);
 }
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  margin: 0;                 /* weiße Ränder vermeiden */
-  background-color: #ffffff; /* beliebige Farbe */
+  font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at -10% -20%, rgba(214,69,69,0.06), transparent 60%),
+    radial-gradient(900px 500px at 110% 120%, rgba(46,125,50,0.06), transparent 60%),
+    var(--bg);
+  line-height: 1.6;
+}
+
+/* Layout */
+main, header, footer, nav, section, aside {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+@media (max-width: 920px) {
+  main { grid-template-columns: 1fr; }
+  aside { order: 2; }
+}
+
+/* Nav */
+nav.wrap {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: saturate(160%) blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.6rem 1.25rem;
+}
+
+nav.wrap a {
+  display: inline-block;
+  margin-right: .8rem;
+  padding: .5rem .85rem;
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: all .2s ease;
+  font-weight: 600;
+}
+
+nav.wrap a:hover,
+nav.wrap a:focus {
+  background: var(--muted);
+  border-color: var(--border);
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  line-height: 1.2;
+  margin: 0 0 .6rem 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 3.2vw + .5rem, 3rem);
+  letter-spacing: .3px;
+  color: var(--accent);
+  text-shadow: 0 2px 0 rgba(255,255,255,0.6);
+}
+
+h2 {
+  font-size: clamp(1.3rem, 2vw + .5rem, 1.8rem);
+  border-left: 6px solid var(--accent-2);
+  padding-left: .6rem;
+  color: #1e1a16;
+}
+
+/* Cards / Sections */
+section, aside {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+}
+
+section + section { margin-top: 1rem; }
+
+/* Buttons */
+button, .button {
+  appearance: none;
+  border: 1px solid var(--accent);
+  background: linear-gradient(180deg, var(--accent), #b73a3a);
+  color: #fff;
+  padding: .7rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(214,69,69,0.28);
+  transition: transform .06s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  filter: saturate(110%);
+  box-shadow: 0 10px 24px rgba(214,69,69,0.36);
+}
+
+button:active { transform: translateY(0); }
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+caption {
+  caption-side: top;
+  font-weight: 800;
+  padding: .9rem;
+  color: var(--accent-2);
+  text-align: left;
+}
+
+thead td {
+  font-weight: 800;
+  background: linear-gradient(180deg, var(--muted), #efe4d9);
+  border-bottom: 1px solid var(--border);
+  padding: .75rem .9rem;
+}
+
+tbody td {
+  padding: .75rem .9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr:nth-child(odd) { background: #fffdf9; }
+tbody tr:hover { background: #fff6ec; }
+
+/* Price column alignment */
+tbody td:last-child, thead td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Forms */
+form {
+  display: grid;
+  gap: .75rem;
+}
+
+label {
+  font-weight: 700;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: .65rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 4px rgba(46,125,50,0.18);
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border-top: 1px solid var(--border);
+  color: #6a5b4d;
+  background: linear-gradient(180deg, transparent, rgba(195,154,107,0.08));
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+footer a:hover { text-decoration: underline; }
+
+/* Accessibility tweaks */
+:focus-visible {
+  outline: 3px solid rgba(46,125,50,.6);
+  outline-offset: 2px;
 }
