@@ -17,21 +17,25 @@
     
     <body>
         
-        <div>
-            <nav class="wrap" aria-label="Hauptnavigation">
-            <a href="#about">Über uns</a>
-            <a href="#menu">Menü</a>
-            <a href="#reserve">Reservieren</a>
-            <a href="#hours">Öffnungszeiten</a>
-            <a href="#kontakt">Kontakt</a>
-            </nav>
-        </div>
-
         <main>
+            
+            <div>
+                <nav class="wrap" aria-label="Hauptnavigation">
+                    <a href="#about">Über uns</a>
+                    <a href="#menu">Menü</a>
+                    <a href="#reserve">Reservieren</a>
+                    <a href="#hours">Öffnungszeiten</a>
+                    <a href="#kontakt">Kontakt</a>
+                </nav>
+            </div>
+            
+        
+
+        
             
             <section>
                 <!--        button für CSS Themes       -->
-                <button onclick="const el = document.getElementById('theme'); el.href = el.href.endsWith('theme-light.css') ? 'theme-dark.css' : 'theme-light.css';">Theme wechseln</button>
+                <button>Theme wechseln</button>
 
 
                 <h1>Trattoria Bella - Italienische Küche</h1>
@@ -43,12 +47,9 @@
                     
             </section>
 
-            <!-- logo ausständig
-            <section>
-                <h2>logo</h2>
-                <img src="img/logo.jpg" alt="">
-            </section>
-            -->
+            
+            
+           
 
             <section>
 
@@ -129,7 +130,10 @@
                 </table>
             </section>
 
-            
+            <section class="hero">
+                <h2>logo</h2>
+                <img src="img/logo1.jpg" alt="">
+            </section> 
 
              
 
@@ -172,7 +176,8 @@
                 </tbody>
             </table>
             </section>
-            <aside>
+            
+            <aside  class="formular">
                 <h2>Reservierungen</h2>
 
                 <form>
