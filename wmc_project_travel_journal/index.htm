@@ -1,78 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>travel_jurnal_destination-MALLORCA</title>
-</head>
-<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    
+</head>
+
+<!-- <style>
+    #navbar {
+        background: linear-gradient(135deg, #8f7b74, #b7a39b);
+        padding: 12px 18px;
+        margin: 0 0 24px;
+        border-radius: 14px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    #navbar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #navbar li {
+        margin: 0;
+    }
+
+    #navbar a {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-style: normal;
+        color: #2f2522;
+        text-decoration: none;
+        letter-spacing: 0.3px;
+        transition: transform 150ms ease, background-color 150ms ease;
+    }
+
+    #navbar a:hover,
+    #navbar a:focus-visible {
+        background-color: rgba(255, 255, 255, 0.45);
+        transform: translateY(-1px);
+        text-decoration: none;
+    }
+</style> -->
+
+
+<body>
 
     <nav id="navbar">
         <ul>
-        <li><a href="Home">Home</a></li>
-        <li><a href="Beaches">Beaches</a></li>
-        <li><a href="Videos">Videos</a></li>
-        <li><a href="Contact">Contact</a></li>
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="beaches.htm">Beaches</a></li>
+            <li><a href="videos.htm">Videos</a></li>
+            <li><a href="contact.htm">Contact</a></li>
         </ul>
     </nav>
 
-    <main id ="main-content">
+    <main>
 
-        <div class="intro">
-        <h1 class="Home">Hello, I am Nikola</h1>
-        <p>A passionate software developer with a keen interest in web development and UI/UX. Student at HTL Spengergasse, studying computer science and software engineering. I like to be on vacation :D</p>
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="pictures/hero_view_me.JPG" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                    width="700" height="500" loading="lazy"
+                    style="border: 8px solid #00000052; border-radius: 12px; box-shadow: 0 10px 30px rgba(177, 17, 17, 0.2);">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+                    Hello, I am Nikola
+                </h1>
+                <p class="lead">
+                    A passionate software developer with a keen interest in web development and UI/UX. Student at HTL
+                    Spengergasse, studying computer science and software engineering. I like to be on vacation :D
+                </p>
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="container px-4 py-5" id="custom-cards">
+                <h2 class="pb-2 border-bottom">Mallorca Jurnay Daily Activitys</h2>
+                <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                            style="background-image: url('pictures/card_urbanexplorig.JPG');">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Urban Exploring</h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="d-flex align-items-center me-3">
+                                        <small>Palma de Mallorca</small>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        </svg> <small>1d</small></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                            style="background-image: url('pictures/hero_cliffs_me.JPG');">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Roudtrip Around The Island</h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="d-flex align-items-center me-3">
+                                        <small>Santa Poca</small>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        </svg> <small>2d</small></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                            style="background-image: url('pictures/card_cave.JPG');">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Cave Exploring</h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="d-flex align-items-center me-3">
+                                        <small>Cala Rajada</small>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        </svg> <small>3d</small></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                            style="background-image: url('pictures/card_beach.JPG');">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Beach Day</h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="d-flex align-items-center me-3">
+                                        <small>Alcudia</small>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        </svg> <small>4d</small></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                            style="background-image: url('pictures/card_Mountain.JPG');">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Mountain Exploring</h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="d-flex align-items-center me-3">
+                                        <small>Soller</small>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        </svg> <small>5d</small></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                            style="background-image: url('pictures/card_ship.JPG');">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Catamaran Jurnay</h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="d-flex align-items-center me-3">
+                                        <small>Sa Calobra</small>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        </svg> <small>6d</small></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <img src="" alt="">
-        
 
 
+        <h1 class="feedback-title">Give me feedback</h1>
+
+        <section class="container px-4 pb-5">
+            <form class="travel-form" action="#" method="post">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label" for="feedback-name">Name</label>
+                        <input class="form-control" type="text" id="feedback-name" name="feedback-name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="feedback-email">Email</label>
+                        <input class="form-control" type="email" id="feedback-email" name="feedback-email" required>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label" for="feedback-message">Feedback</label>
+                        <textarea class="form-control" id="feedback-message" name="feedback-message" rows="4" required></textarea>
+                    </div>
+                    <div class="col-12 d-flex justify-content-end">
+                        <button class="btn btn-dark" type="submit">Abschicken</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- <section class=\"container px-4 pb-5\">
+            <h2 class=\"pb-2 border-bottom\">Share Your Mallorca Tip</h2>
+            <form class=\"travel-form\" action=\"#\" method=\"post\">
+                <div class=\"row g-3\">
+                    <div class=\"col-md-6\">
+                        <label class=\"form-label\" for=\"tip-name\">Name</label>
+                        <input class=\"form-control\" type=\"text\" id=\"tip-name\" name=\"tip-name\" required>
+                    </div>
+                    <div class=\"col-md-6\">
+                        <label class=\"form-label\" for=\"tip-email\">Email</label>
+                        <input class=\"form-control\" type=\"email\" id=\"tip-email\" name=\"tip-email\" required>
+                    </div>
+                    <div class=\"col-md-6\">
+                        <label class=\"form-label\" for=\"tip-spot\">Favorite spot</label>
+                        <input class=\"form-control\" type=\"text\" id=\"tip-spot\" name=\"tip-spot\"
+                            placeholder=\"Beach, town, or viewpoint\">
+                    </div>
+                    <div class=\"col-md-6\">
+                        <label class=\"form-label\" for=\"tip-month\">When did you visit?</label>
+                        <input class=\"form-control\" type=\"month\" id=\"tip-month\" name=\"tip-month\">
+                    </div>
+                    <div class=\"col-12\">
+                        <label class=\"form-label\" for=\"tip-message\">Your tip</label>
+                        <textarea class=\"form-control\" id=\"tip-message\" name=\"tip-message\" rows=\"4\"
+                            required></textarea>
+                    </div>
+                    <div class=\"col-12 d-flex justify-content-end\">
+                        <button class=\"btn btn-dark\" type=\"submit\">Send Tip</button>
+                    </div>
+                </div>
+            </form>
+        </section> -->
     </main>
-    
-    <footer>
-        <p>&copy; 2024 Nikola's Travel Journal</p>
+
+    <footer class="footer">
+        <p>&copy; 2025 • Nikola's Travel Journal • ALL RIGHTS RESERVED</p>
     </footer>
 
 
-    <style>
 
-        #navbar {
-            background-color: #978787;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-        #navbar a {
-            font-style: none;
-            color: inherit;
-            text-decoration: none;
-
-
-        }
-
-        #navbar a:hover {
-        text-decoration: underline;
-        }
-
-        #navbar ul {
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #navbar li {
-            margin-right: 20px;
-        }
-
-        #navbar a {
-            text-decoration: none;
-        }
-
-    </style>
 
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
+
+
 </html>
