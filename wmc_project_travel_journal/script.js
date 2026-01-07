@@ -1,7 +1,5 @@
 /* This is for the feedback form on the travel journal website */
 
-
-
 (function () {
     const form = document.querySelector('#feedback-form');
     if (!form) return;
@@ -31,3 +29,23 @@
         }
     });
 })();
+
+/* Burger Menu Toggle */
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerMenu = document.getElementById('burger-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (burgerMenu && navMenu) {
+        burgerMenu.addEventListener('click', function() {
+            burgerMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                burgerMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+});

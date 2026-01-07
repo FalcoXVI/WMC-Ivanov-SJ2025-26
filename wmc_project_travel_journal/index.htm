@@ -16,7 +16,12 @@
 <body>
 
     <nav id="navbar">
-        <ul>
+        <button id="burger-menu" class="burger-menu" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="nav-menu">
             <li><a href="index.htm">Home</a></li>
             <li><a href="pictures.htm">Pictures</a></li>
             <li><a href="videos.htm">Videos</a></li>
@@ -29,7 +34,7 @@
         <div class="row flex-lg-row-reverse align-items-center g-4 py-5">
             
         <div class="div-hero">
-            <div class="col-10 col-sm-8 col-lg-6">
+            <div class="col-10 col-sm-8 col-lg-6" id="hero-image">
                 <img src="pictures/hero_view_me.JPG" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
                     width="700" height="500" loading="lazy"
                     style="border: 8px solid #00000052; border-radius: 12px; box-shadow: 0 10px 30px rgba(177, 17, 17, 0.2);">
