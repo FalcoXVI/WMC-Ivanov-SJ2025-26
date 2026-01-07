@@ -3,18 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>travel_journal_videos</title>
+
 </head>
 
 <body>
 
     <nav id="navbar">
-        <ul>
+        <button id="burger-menu" class="burger-menu" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="nav-menu">
             <li><a href="index.htm">Home</a></li>
             <li><a href="pictures.htm">Pictures</a></li>
             <li><a href="videos.htm">Videos</a></li>
-            <li><a href="index.htm#feedback-title">Feedback</a></li>
+            <li><a href="#feedback-title">Feedback</a></li>
         </ul>
     </nav>
 
@@ -115,8 +122,11 @@
         </section>
     </main>
 
+    <footer class="footer">
+        <p>&copy; 2026 • Nikola's Travel Journal • ALL RIGHTS RESERVED</p>
+    </footer>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>

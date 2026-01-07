@@ -453,9 +453,52 @@ body {
 
     .ranking-table th,
     .ranking-table td {
-    padding: 5px 5px;
-    text-align: left;
-}
+        padding: 5px 5px;
+        text-align: left;
+    }
 
+    /* videos */
+
+    .videos-content {
+        padding: 0 1rem;
+        margin: 20px auto;
+    }
+
+    .fancy-title {
+        font-size: 28px;
+        margin-top: 80px;
+        margin-bottom: 15px;
+    }
+
+    .left-video-layout,
+    .right-video-layout {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .video-aside {
+        flex: 1 1 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .video-element {
+        height: 250px;
+    }
+
+    .video-aside-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .video-aside-text {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .video-container1 {
+        width: 100%;
+    }
 
 }
