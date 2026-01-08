@@ -101,11 +101,7 @@ body {
 /* ------------------------------------------- */
 /* index.htm css */
 
-/* .col {
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-} */
+
 
 .div-hero {
     display: flex;
@@ -116,12 +112,6 @@ body {
     
 }
 
-/* .col-lg-6 {
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
- */
 .hero-container {
     margin-left: 100px;
     margin-right: auto;
@@ -168,8 +158,8 @@ body {
 .pictures-content {
     display: flexbox;
     text-align: center;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 500px;
+    margin-right: 500px;
     margin-bottom: 30px;
     margin-top: 30px;
 }
@@ -500,5 +490,11 @@ body {
     .video-container1 {
         width: 100%;
     }
+
+    .pictures-content {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
 
 }
