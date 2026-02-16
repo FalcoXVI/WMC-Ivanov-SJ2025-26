@@ -2,4 +2,4 @@
 
 Dieses Repository wird rein zu Schulzwecken verwendet!
 
-# wmc_project_travel_journal ist ein Projekt
+ wmc_project_travel_journal ist ein Projekt
