@@ -3,7 +3,6 @@
 (function () {
     const form = document.querySelector('#feedback-form');
     if (!form) return;
-
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
         const submitBtn = form.querySelector('button[type="submit"]');
