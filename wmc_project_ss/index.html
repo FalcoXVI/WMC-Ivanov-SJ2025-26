@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitals Game Pro</title>
+    <!-- Modern Font: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌍 Capitals Game</h1>
+        <p id="score">
+            Genauigkeit: <strong id="accuracy">0%</strong> &nbsp;|&nbsp; Richtig: <strong id="correct">0</strong> / <strong id="total-answered">0</strong>
+        </p>
+    </header>
+
+    <main>
+
+        <!-- Spielbereich -->
+        <section aria-label="Spielbereich" class="card-section">
+            <p id="counter">Frage <span id="current">1</span></p>
+
+            <div id="card-container">
+                <div id="card">
+                    <div id="card-front">
+                        <div style="width: 100%;">
+                            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 0.5rem;">Was ist die Hauptstadt von:</p>
+                            <h3 id="country-name" style="font-size: 2.2rem; color: #c4b5fd;">Lade Länder...</h3>
+                        </div>
+                    </div>
+                    <div id="card-back">
+                        <div style="width: 100%;">
+                            <p id="result-message" style="margin-bottom: 0.5rem; font-size: 1.2rem;"></p>
+                            <h3 id="correct-capital" style="font-size: 2rem; color: white;"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="answer-form" style="display: flex; gap: 1rem; margin-top: 1rem;">
+                <input type="text" id="user-input" placeholder="Deine Antwort..." required autocomplete="off" style="flex: 1; margin: 0;">
+                <button type="submit" id="btn-check" style="margin: 0; white-space: nowrap;">Prüfen 🔍</button>
+            </form>
+
+            <div class="btn-row" style="margin-top: 1rem; display: none;" id="next-row">
+                <button id="btn-next" style="width: 100%; padding: 1rem; font-size: 1.1rem; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">Nächste Frage ➡️</button>
+            </div>
+        </section>
+
+        <!-- Statistik & Download -->
+        <section aria-label="Statistik">
+            <h2>📊 Deine Statistik</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Du hast bisher <strong id="stat-total" style="color: white;">0</strong> Fragen beantwortet.</p>
+            <div class="btn-row" style="margin-bottom: 0;">
+                <button id="btn-download" style="flex: 1; background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3);">💾 Antworten als JSON speichern</button>
+                <button id="btn-reset" style="background: rgba(239, 68, 68, 0.1); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3);">♻️ Neustarten</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>WMC Projekt &mdash; Sommersemester 2025/26</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
