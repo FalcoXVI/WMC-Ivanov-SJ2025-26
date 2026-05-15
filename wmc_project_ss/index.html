@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lernkarten</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Lernkarten</h1>
+        <p id="score">
+            Richtig: <strong id="correct">0</strong> &nbsp;|&nbsp; Falsch: <strong id="wrong">0</strong>
+        </p>
+    </header>
+
+    <main>
+
+        <!-- Kartenbereich -->
+        <section aria-label="Lernkarte">
+            <p id="counter">Karte <span id="current">1</span> von <span id="total">0</span></p>
+
+            <div id="card-container">
+                <div id="card">
+                    <div id="card-front">
+                        <p id="front-text">Lade Karten…</p>
+                    </div>
+                    <div id="card-back">
+                        <p id="back-text"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-row">
+                <button id="btn-flip">Umdrehen</button>
+                <button id="btn-correct" disabled>&#10003; Richtig</button>
+                <button id="btn-wrong" disabled>&#10007; Falsch</button>
+            </div>
+
+            <div class="btn-row">
+                <button id="btn-prev">&#8592; Zurück</button>
+                <button id="btn-next">Weiter &#8594;</button>
+            </div>
+        </section>
+
+        <!-- Karte hinzufügen -->
+        <section aria-label="Neue Karte hinzufügen">
+            <h2>Neue Karte hinzufügen</h2>
+            <form id="add-form">
+                <label for="input-front">Frage / Begriff</label>
+                <input type="text" id="input-front" placeholder="z.B. Hauptstadt von Österreich" required>
+
+                <label for="input-back">Antwort / Erklärung</label>
+                <input type="text" id="input-back" placeholder="z.B. Wien" required>
+
+                <button type="submit">Hinzufügen</button>
+            </form>
+        </section>
+
+        <!-- Kartenliste -->
+        <section aria-label="Alle Karten">
+            <h2>Alle Karten</h2>
+            <ul id="card-list"></ul>
+            <button id="btn-reset">Punkte zurücksetzen</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>WMC Projekt &mdash; Sommersemester 2025/26</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

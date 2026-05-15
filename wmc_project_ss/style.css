@@ -1,0 +1,254 @@
+/* =============================================
+   CSS-Variablen (Design-Token)
+   ============================================= */
+:root {
+    --primary:      #4f46e5;
+    --primary-dark: #3730a3;
+    --success:      #16a34a;
+    --danger:       #dc2626;
+    --bg:           #f1f5f9;
+    --card-bg:      #ffffff;
+    --text:         #1e293b;
+    --muted:        #64748b;
+    --border:       #e2e8f0;
+    --radius:       12px;
+}
+
+/* =============================================
+   Reset & Basis
+   ============================================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =============================================
+   Header & Footer
+   ============================================= */
+header {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+#score {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+footer {
+    background: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 0.9rem;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* =============================================
+   Layout – Main
+   ============================================= */
+main {
+    flex: 1;
+    max-width: 680px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+section {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* =============================================
+   Karten-Zähler
+   ============================================= */
+#counter {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+/* =============================================
+   Lernkarte (3D Flip)
+   ============================================= */
+#card-container {
+    perspective: 1000px;
+    height: 180px;
+    cursor: pointer;
+    margin-bottom: 1.2rem;
+}
+
+#card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+#card.flipped {
+    transform: rotateY(180deg);
+}
+
+#card-front,
+#card-back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    backface-visibility: hidden;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+#card-front {
+    background: white;
+}
+
+#card-back {
+    background: #eef2ff;
+    color: var(--primary-dark);
+    transform: rotateY(180deg);
+}
+
+/* =============================================
+   Button-Zeilen
+   ============================================= */
+.btn-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+/* =============================================
+   Buttons (allgemein)
+   ============================================= */
+button {
+    padding: 0.55rem 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: opacity 0.15s;
+}
+
+button:hover:not(:disabled) {
+    opacity: 0.85;
+}
+
+button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+#btn-flip    { background: var(--primary); color: white; }
+#btn-correct { background: var(--success);  color: white; }
+#btn-wrong   { background: var(--danger);   color: white; }
+#btn-prev, #btn-next, #btn-reset { background: var(--border); color: var(--text); }
+
+/* =============================================
+   Formular
+   ============================================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+input[type="text"] {
+    padding: 0.55rem 0.8rem;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+form button {
+    background: var(--primary);
+    color: white;
+    align-self: flex-start;
+    margin-top: 0.2rem;
+}
+
+/* =============================================
+   Kartenliste
+   ============================================= */
+#card-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#card-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 0.55rem 0.8rem;
+    font-size: 0.9rem;
+    gap: 0.5rem;
+}
+
+#card-list li span {
+    flex: 1;
+}
+
+#card-list .delete-btn {
+    background: var(--danger);
+    color: white;
+    padding: 0.3rem 0.65rem;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
