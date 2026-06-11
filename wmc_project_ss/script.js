@@ -1,6 +1,6 @@
 "use strict";
 
-const API_URL = "https://restcountries.com/v3.1/all?fields=name,capital";
+const API_URL = "https://countriesnow.space/api/v0.1/countries/capital";
 const STORAGE_KEY = "capitals_game_v1";
 
 const state = {
@@ -31,14 +31,16 @@ async function initGame() {
 async function fetchCountries() {
     try {
         const response = await fetch(API_URL);
-        const data = await response.json();
+        const json = await response.json();
+
+        if (json.error) throw new Error(json.msg);
 
         // Filtere Länder heraus, die keine Hauptstadt haben
-        const validCountries = data.filter(c => c.capital && c.capital.length > 0 && c.name && c.name.common);
+        const validCountries = json.data.filter(c => c.capital && c.capital.trim().length > 0 && c.name);
 
         state.allCountries = validCountries.map(c => ({
-            name: c.name.common,
-            capital: c.capital[0]
+            name: c.name,
+            capital: c.capital
         }));
 
     } catch (error) {
